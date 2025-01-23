@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Key verification successful! Press OK to download.');
       closeKeySystem();
       // Redirect to the Mega download link
-      window.location.href = 'https://mega.nz/file/HLwSBSJa#g4a8V8xOiogzSCXSyTa7s0zs3_USnGIcGDrL8zd1hYE';
+      window.location.href = 'https://mega.nz/file/ib4WDD6R#Z095pEQ7jb5L6S2SuEZRPRfafyKYYQIJdL0qpoKXJU8';
     } else {
       alert('Invalid key! Please check the #download channel in our Discord server.');
     }
