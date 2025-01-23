@@ -1,0 +1,477 @@
+:root {
+    --primary-color: #7c3aed;
+    --secondary-color: #5b21b6;
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --card-bg: rgba(30, 41, 59, 0.7);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    opacity: 0.8;
+  }
+  
+  .background-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, var(--background-color) 70%);
+  }
+  
+  header {
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo img {
+    display: none;
+  }
+  
+  .logo-svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-shape {
+    fill: var(--primary-color);
+    animation: rotateLogo 4s infinite linear;
+  }
+  
+  @keyframes rotateLogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  main {
+    padding-top: 80px;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .interface-hero {
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .brand-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  h1.brand-text {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .download-btn, .key-system-btn {
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .download-btn {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .key-system-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .download-btn:hover, .key-system-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .download-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  
+  .features {
+    padding: 4rem 2rem;
+    background: rgba(15, 23, 42, 0.5);
+  }
+  
+  .features h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    fill: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .feature-card p {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .showcase {
+    padding: 4rem 2rem;
+    background: rgba(15, 23, 42, 0.5);
+  }
+  
+  .showcase-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .showcase-image {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+  }
+  
+  .executor-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .executor-preview:hover {
+    transform: scale(1.02);
+  }
+  
+  .showcase-details {
+    padding: 2rem;
+  }
+  
+  .showcase-details h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-item p {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal-content h2 {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  .key-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .step p {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .verify-btn, #keySystemModal button {
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .verify-btn:hover, #keySystemModal button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .discord-btn {
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: opacity 0.3s;
+    background: #5865F2;
+  }
+  
+  .discord-btn:hover {
+    opacity: 0.9;
+  }
+  
+  #keyInput {
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--text-color);
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(15, 23, 42, 0.9);
+  }
+  
+  footer p {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    h1.brand-text {
+      font-size: 3rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+    
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .showcase-content {
+      flex-direction: column;
+    }
+    
+    .feature-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .showcase-details {
+      padding: 1rem;
+    }
+  }
