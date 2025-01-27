@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUPSY Reviews - User Testimonials</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="hover-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#3b82f6" />
+        <stop offset="100%" style="stop-color:#8b5cf6" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <header>
+    <nav>
+      <div class="logo">
+        <div class="logo-text">SY</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="interface.html">Interface</a>
+        <a href="power.html">Power</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="#" onclick="triggerDownload()">Download</a>
+        <a href="https://discord.gg/ntYjFKqeVK" target="_blank">Discord</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="interface-hero">
+      <h1 class="brand-text">User Reviews</h1>
+      <p class="tagline">Share Your Experience</p>
+    </section>
+
+    <section class="trust-section">
+      <h2>Why Trust STUPSY?</h2>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <svg class="trust-icon" viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+          </svg>
+          <h3>Safety First</h3>
+          <p>Our executor is regularly scanned and verified to be 100% malware-free. We prioritize user safety above all else.</p>
+          <ul class="trust-points">
+            <li>Regular security audits</li>
+            <li>Virus-free certification</li>
+            <li>Transparent code base</li>
+          </ul>
+        </div>
+
+        <div class="trust-card">
+          <svg class="trust-icon" viewBox="0 0 24 24">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+          </svg>
+          <h3>Privacy Protected</h3>
+          <p>We never collect personal data or sensitive information. Your privacy is guaranteed with our zero-logging policy.</p>
+          <ul class="trust-points">
+            <li>No data collection</li>
+            <li>Secure execution</li>
+            <li>Private script storage</li>
+          </ul>
+        </div>
+
+        <div class="trust-card">
+          <svg class="trust-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+          </svg>
+          <h3>Trusted Community</h3>
+          <p>Join our growing community of satisfied users. Our reputation speaks for itself.</p>
+          <ul class="trust-points">
+            <li>Lots of trusted users</li>
+            <li>24/7 support</li>
+            <li>Positive reviews</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="trust-statement">
+        <div class="trust-badge">
+          <svg class="badge-icon" viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11zm-11.59.59L6 13l4 4 8-8-1.41-1.42L10 14.17z"/>
+          </svg>
+        </div>
+        <h3>Our Commitment to Safety</h3>
+        <p>At STUPSY, we understand the importance of trust in the exploiting community. That's why we've built our executor with security at its core. Every update is thoroughly tested and verified before release, ensuring you always have a safe and reliable tool at your disposal.</p>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="review-form">
+        <h3>Write a Review</h3>
+        <div class="star-rating">
+          <span class="star" data-rating="1">★</span>
+          <span class="star" data-rating="2">★</span>
+          <span class="star" data-rating="3">★</span>
+          <span class="star" data-rating="4">★</span>
+          <span class="star" data-rating="5">★</span>
+        </div>
+        <input type="text" id="reviewerName" placeholder="Your Name" class="review-input">
+        <textarea id="reviewText" placeholder="Write your review here..." class="review-input"></textarea>
+        <button class="submit-review">Submit Review</button>
+      </div>
+
+      <div class="review-grid" id="reviewContainer">
+        <!-- Reviews will be dynamically added here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 STUPSY Executor. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
